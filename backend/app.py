@@ -15,7 +15,7 @@ app = Flask(__name__)
 SUPABASE_URL = os.environ.get("https://hymqswziufembwgjwgwy.supabase.co")
 SUPABASE_KEY = os.environ.get("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5bXFzd3ppdWZlbWJ3Z2p3Z3d5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDg5ODg0MywiZXhwIjoyMDk2NDc0ODQzfQ.3W0KcmY0UKAQ8VT-K5EiDrNtTjpzc4OZRmgkx-jpSqw")
 BACKEND_ALLOWED_ORIGINS = os.environ.get("BACKEND_ALLOWED_ORIGINS", "*")
-use_in_memory_fallback = os.environ.get("USE_IN_MEMORY_FALLBACK", "true").strip().lower() in ("1", "true", "yes", "on")
+use_in_memory_fallback = os.environ.get("USE_IN_MEMORY_FALLBACK", "false").strip().lower() in ("1", "true", "yes", "on")
 
 # Enable CORS for frontend communication.
 # In production, set BACKEND_ALLOWED_ORIGINS to your Vercel frontend URL.
